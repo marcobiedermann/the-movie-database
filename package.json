@@ -13,7 +13,8 @@
     "prepare": "husky install",
     "pretty-quick": "pretty-quick --staged",
     "start": "gatsby serve",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "test:ci": "npm run test"
   },
   "repository": {
     "type": "git",
