@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React, { ChangeEvent, FC, useState } from 'react';
 import useSWR from 'swr';
 import Movies from '../Movies';
@@ -37,9 +39,9 @@ const App: FC = () => {
   }
 
   const onInput = (event: ChangeEvent<HTMLInputElement>) => {
-    const query = event.target.value;
+    const { value } = event.target
 
-    setQuery(query);
+    setQuery(value);
   };
 
   return (

@@ -3,7 +3,7 @@ import './search.css';
 
 export interface SearchProps {
   query: string;
-  onInput: (event: ChangeEvent<HTMLInputElement>) => void;
+  onInput: (_event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Search: FC<SearchProps> = (props) => {

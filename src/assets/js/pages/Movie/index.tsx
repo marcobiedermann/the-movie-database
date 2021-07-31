@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import useSWR from 'swr';
@@ -34,7 +36,7 @@ type Status = 'Rumored' | 'Planned' | 'In Production' | 'Post Production' | 'Rel
 interface MoviePageQuery {
   adult: boolean;
   backdrop_path: string | null;
-  belongs_to_collection: object | null;
+  belongs_to_collection: Record<string, unknown> | null;
   budget: number;
   genres: Genre[];
   homepage: string | null;
@@ -70,8 +72,6 @@ const MoviePage: FC = () => {
   if (!data) {
     return <div>Loading …</div>;
   }
-
-  console.log({ data });
 
   return (
     <div>
